@@ -10,7 +10,7 @@ var SignUpPage = function(cy) {
         cy.visit('https://www.hackerrank.com/auth/signup?h_l=body_middle_left_button&h_r=sign_up')
     }
 
-    this.signUp = function (firstName, lastName, email, pwd) {
+    this.fillUpForm = function (firstName, lastName, email, pwd) {
         cy.get(fullNameInputSelector)
         .type(firstName + ' ' + lastName)
 
@@ -19,9 +19,15 @@ var SignUpPage = function(cy) {
 
         cy.get(pwdInputSelector)
         .type(pwd + 'fakepwd')
-
-        cy.contains(submitButtonSelector).click()
     };
+
+    this.submit = function () {
+        cy.contains(submitButtonSelector).click()
+    }
+
+    this.isValidationErrorDisplayed = function () {
+        cy.contains(submitButtonSelector).should('be.disabled')
+    }
 };
 
 module.exports = SignUpPage
