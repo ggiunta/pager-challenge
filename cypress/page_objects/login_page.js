@@ -19,6 +19,8 @@ var LoginPage = function(cy) {
 
     this.submit = function () {
         cy.contains(submitButtonSelector).click()
+
+        cy.wait(5000)
     }
 
     this.isValidationErrorDisplayed = function () {
