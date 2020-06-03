@@ -1,8 +1,3 @@
-/* let loginPage = new (require('../../page_objects/login_page.js'))(cy)
-let pythonPage = new (require('../../page_objects/python_page.js'))(cy)
-let challengePage = new (require('../../page_objects/challenge_page.js'))(cy)
-let bookmarksPage = new (require('../../page_objects/bookmarks_page.js'))(cy) */
-
 describe('Hacker Rank Tests', () => {
     it('Add bookmark', () => {
         let loginPage = new (require('../../page_objects/login_page.js'))(cy)
@@ -10,7 +5,7 @@ describe('Hacker Rank Tests', () => {
         let challengePage = new (require('../../page_objects/challenge_page.js'))(cy)
 
         loginPage.visit()
-        loginPage.fillUpForm('germanfgiunta@gmail.com', 'Pager4751')
+        loginPage.fillUpForm(data.validUser.user, data.validUser.password)
         loginPage.submit()
 
         pythonPage.visit()
@@ -24,7 +19,7 @@ describe('Hacker Rank Tests', () => {
         let bookmarksPage = new (require('../../page_objects/bookmarks_page.js'))(cy)
 
         loginPage.visit()
-        loginPage.fillUpForm('germanfgiunta@gmail.com', 'Pager4751')
+        loginPage.fillUpForm(data.validUser.user, data.validUser.password)
         loginPage.submit()
         
         bookmarksPage.visit()
@@ -39,7 +34,7 @@ describe('Hacker Rank Tests', () => {
         let bookmarksPage = new (require('../../page_objects/bookmarks_page.js'))(cy)
 
         loginPage.visit()
-        loginPage.fillUpForm('germanfgiunta@gmail.com', 'Pager4751')
+        loginPage.fillUpForm(data.validUser.user, data.validUser.password)
         loginPage.submit()
 
         pythonPage.visit()
