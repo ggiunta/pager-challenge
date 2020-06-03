@@ -4,7 +4,7 @@ var PythonPage = function(cy) {
     const recommendedChallengeSelector = '.recommended-challenge'
 
     this.visit = function () {
-        cy.visit('https://www.hackerrank.com/domains/python')
+        cy.visit('/domains/python')
     }
 
     this.selectFirstChallenge = function () {

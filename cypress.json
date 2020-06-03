@@ -1,1 +1,4 @@
-{"watchForFileChanges": false}
+{
+    "watchForFileChanges": false,
+    "baseUrl": "https://www.hackerrank.com"
+}

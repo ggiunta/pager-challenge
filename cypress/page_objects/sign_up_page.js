@@ -7,7 +7,7 @@ var SignUpPage = function(cy) {
     const submitButtonSelector = 'Create'
 
     this.visit = function () {
-        cy.visit('https://www.hackerrank.com/auth/signup?h_l=body_middle_left_button&h_r=sign_up')
+        cy.visit('/auth/signup?h_l=body_middle_left_button&h_r=sign_up')
     }
 
     this.fillUpForm = function (firstName, lastName, email, pwd) {

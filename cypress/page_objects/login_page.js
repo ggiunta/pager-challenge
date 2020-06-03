@@ -6,7 +6,7 @@ var LoginPage = function(cy) {
     const submitButtonSelector = 'Log In'
 
     this.visit = function () {
-        cy.visit('https://www.hackerrank.com/auth/login')
+        cy.visit('/auth/login')
     }
 
     this.fillUpForm = function (usr, pwd) {

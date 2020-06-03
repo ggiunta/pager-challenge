@@ -6,7 +6,7 @@ var BookmarksPage = function(cy) {
     const challengeItemSelector = '.challenge-list-item'
 
     this.visit = function () {
-        cy.visit('https://www.hackerrank.com/challenges/bookmarks')
+        cy.visit('/challenges/bookmarks')
     }
 
     this.bookmark = function () {
