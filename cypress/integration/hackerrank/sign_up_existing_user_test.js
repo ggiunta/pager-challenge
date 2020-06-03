@@ -4,6 +4,7 @@ describe('Hacker Rank Tests', () => {
         
         let randomString = Cypress._.random(0, 1e6)
 
+        
         signUpPage.visit()
         signUpPage.fillUpForm(randomString, randomString, 'germanfgiunta', randomString)
 

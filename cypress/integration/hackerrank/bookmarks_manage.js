@@ -4,6 +4,9 @@ describe('Hacker Rank Tests', () => {
         let pythonPage = new (require('../../page_objects/python_page.js'))(cy)
         let challengePage = new (require('../../page_objects/challenge_page.js'))(cy)
 
+        let data = require('../../data/data.json')
+
+
         loginPage.visit()
         loginPage.fillUpForm(data.validUser.user, data.validUser.password)
         loginPage.submit()
@@ -17,6 +20,9 @@ describe('Hacker Rank Tests', () => {
     it('Filter bookmarks', () => {
         let loginPage = new (require('../../page_objects/login_page.js'))(cy)
         let bookmarksPage = new (require('../../page_objects/bookmarks_page.js'))(cy)
+        
+        let data = require('../../data/data.json')
+
 
         loginPage.visit()
         loginPage.fillUpForm(data.validUser.user, data.validUser.password)
@@ -33,6 +39,9 @@ describe('Hacker Rank Tests', () => {
         let challengePage = new (require('../../page_objects/challenge_page.js'))(cy)
         let bookmarksPage = new (require('../../page_objects/bookmarks_page.js'))(cy)
 
+        let data = require('../../data/data.json')
+
+        
         loginPage.visit()
         loginPage.fillUpForm(data.validUser.user, data.validUser.password)
         loginPage.submit()
